@@ -1,0 +1,9 @@
+.fll{
+    display: flex;
+    gap: 15px;
+}
+
+.img-default{
+    border-radius: 10px;
+    height: 150px;
+}

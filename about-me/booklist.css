@@ -1,0 +1,21 @@
+.booklist-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.book{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.book img{
+    width: 300px;
+    max-width: 300px;
+    padding-right: 20px;
+}
+
+.book p{
+    flex: 1;
+    padding-right: 20px;
+}
