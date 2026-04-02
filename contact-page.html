@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            <meta charset="UTF-8"/>
+            <meta name="description" content="Contact Pranav Thangakumar."/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <link rel="stylesheet" href="main.css"/>
+            <link rel="stylesheet" href="contact-page.css"/>
+            <title>Contact Page</title>
+
+        </head>
+        <body>
+            <header>
+                <h1>Welcome to the CONTACT PAGE!</h1>
+                <div id="links">
+                    <a href="homepage.html">Homepage</a>
+                    <a href="about-me/about-me.html">About Me</a>
+                    <a href="contact-page.html">Contact Me</a>
+                    <a href="blog-homepage.html">Blogpage</a>
+                </div>
+                
+            </header>
+
+            <h2>Contact Me!</h2>
+            <form action="send_email.php" method="post">
+                <label for="name">Name:</label>
+                <br>
+                <input type="text" name="name" class="form-item"> 
+                <br><br>  
+                
+                <label for="reason for contact">Reason for contact:</label>
+                <br>
+                <select name="reason for contact" class="form-item">
+                    <option value="Buisness">Buisness</option>
+                    <option value="Personal">Personal Matters</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br><br>
+
+                <label for="message">Message:</label>
+                <br>
+                <textarea id="message" name="message" class="form-item" required></textarea>
+                <br><br>
+
+                <label for="email">Email (used to reply only):</label>
+                <br>
+                <input type="email" name="email" class="form-item">
+                <br><br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </body>

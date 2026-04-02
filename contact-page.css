@@ -1,0 +1,24 @@
+label{
+    color: darkblue;
+    font-size: larger;
+}
+
+.section-div{
+    padding-bottom: 50px;
+}
+
+.distancer-div{
+    padding-bottom: 10px;
+}
+
+.form-item{
+    width: 300px;
+}
+
+.form-item:hover{
+    background-color: azure;
+}
+
+form{
+    max-width: 400px;
+}

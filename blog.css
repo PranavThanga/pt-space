@@ -1,0 +1,39 @@
+.blog-overview-holder{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    border: 15px black;
+}
+
+.blog-overview:hover{
+    box-shadow: 5px 5px 5px palegoldenrod;
+}
+
+.blog-overview{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    background-color: rgb(100, 135, 255);
+    overflow: hidden;
+    gap: 2px;
+}
+
+.blog-overview img{
+    max-width: 500px;
+    max-height: 150px;
+    object-position: top;
+    object-fit: cover;;
+}
+
+.blog-overview img:hover{
+    max-height: 300px
+}
+
+.blog-overview p{
+    font-size: medium;
+    padding-left: 5px;
+}
+
+
+
