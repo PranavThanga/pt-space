@@ -3,29 +3,29 @@ body {
   max-width: auto;
   margin: 5px auto; /* fix: was "5 auto" (invalid, missing unit) */
 }
- 
+
 p, li {
   font-size: larger;
 }
- 
+
 li {
   color: darkblue;
 }
- 
+
 h2 {
     border-bottom: 5px dotted deepskyblue;
 }
- 
+
 p {
   line-height: 1.5;
 }
- 
+
 /* header */
 header {
   background-color: palegoldenrod;
   border: 5px dotted deepskyblue;
 }
- 
+
 header div {
   display: flex;
   height: 50px;
@@ -33,48 +33,48 @@ header div {
   align-items: center;
   padding-top: 0px;
 }
- 
+
 header a {
   font-size: larger;
 }
- 
+
 header h1 {
   color: tomato;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   padding-top: 20px;
 }
- 
+
 a:link   { color: orangered; }
 a:hover  { transform: scale(1.1); color: darkblue; }
 a:active { color: darkblue; }
 a:visited { color: orangered; }
- 
+
 .left-align  { text-align: left; }
 .center-align { text-align: center; }
- 
+
 .cell {
   border: black solid 2px;
   padding: 4px 8px; /* fix: was "4px, 8px" (invalid comma) */
   width: 75px;
 }
- 
+
 th, td { text-align: center; }
- 
+
 /* Flexbox code */
 .flex-default {
     display: flex;
     padding-top: 25px;
     gap: 0;
 }
- 
+
 .flex-default-text {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     max-width: 900px;
 }
- 
+
 /* tti - Text to img */
 .tti-img {
     display: flex;
@@ -85,7 +85,7 @@ th, td { text-align: center; }
     padding-right: 100px;
     gap: 15px;
 }
- 
+
 /* itt - img to text */
 .itt-img {
     display: flex;
@@ -96,7 +96,7 @@ th, td { text-align: center; }
     padding-left: 100px;
     gap: 15px;
 }
- 
+
 /* ============================================
    RESPONSIVE — Tablet (max 900px)
    ============================================ */
@@ -110,7 +110,7 @@ th, td { text-align: center; }
         padding-right: 15px;
     }
 }
- 
+
 /* ============================================
    RESPONSIVE — Mobile (max 768px)
    ============================================ */
@@ -118,16 +118,16 @@ th, td { text-align: center; }
     body {
         margin: 0;
     }
- 
+
     p, li {
         font-size: medium;
     }
- 
+
     header h1 {
         font-size: 1.3rem;
         padding-top: 10px;
     }
- 
+
     /* Stack nav links and allow wrapping */
     header div {
         height: auto;
@@ -136,34 +136,34 @@ th, td { text-align: center; }
         padding: 10px;
         justify-content: center;
     }
- 
+
     header a {
         font-size: medium;
     }
- 
+
     /* Stack side-by-side sections vertically */
     .flex-default {
         flex-direction: column;
         padding-top: 15px;
     }
- 
+
     .flex-default-text {
         max-width: 100%;
         padding: 0 10px;
     }
- 
-    /* Remove heavy padding, center images */
+
+    /* Images appear below text on mobile */
     .tti-img {
         padding: 15px 10px;
         margin: 0;
-        order: -1; /* Images appear above text on mobile */
     }
- 
+
     .itt-img {
         padding: 15px 10px;
         margin: 0;
+        order: 1; /* itt: image was first in HTML, push it below text */
     }
- 
+
     /* Shrink chess rating table cells */
     .cell {
         width: 55px;
@@ -171,7 +171,7 @@ th, td { text-align: center; }
         padding: 3px 4px;
     }
 }
- 
+
 /* ============================================
    RESPONSIVE — Small phones (max 480px)
    ============================================ */
@@ -179,12 +179,12 @@ th, td { text-align: center; }
     header h1 {
         font-size: 1.1rem;
     }
- 
+
     h2 {
         font-size: 1.2rem;
         padding: 0 10px;
     }
- 
+
     .cell {
         width: 45px;
         font-size: x-small;
