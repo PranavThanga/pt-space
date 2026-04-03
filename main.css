@@ -150,18 +150,29 @@ th, td { text-align: center; }
     .flex-default-text {
         max-width: 100%;
         padding: 0 10px;
+        order: 0; /* always first (text on top) */
     }
 
-    /* Images appear below text on mobile */
+    /* Images always below text on mobile */
     .tti-img {
         padding: 15px 10px;
         margin: 0;
+        order: 1;
     }
 
     .itt-img {
         padding: 15px 10px;
         margin: 0;
-        order: 1; /* itt: image was first in HTML, push it below text */
+        order: 1;
+    }
+
+    /* Shrink images — !important overrides inline height="300px" HTML attributes */
+    .tti-img img,
+    .itt-img img {
+        max-width: 85%;
+        width: auto;
+        height: auto !important;
+        max-height: 220px;
     }
 
     /* Shrink chess rating table cells */

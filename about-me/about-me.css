@@ -1,72 +1,24 @@
-.introduction {
+.fll {
     display: flex;
-    padding-top: 20px;
-    align-items: center;
+    gap: 15px;
 }
 
-.introduction img {
-    padding: 10px;
-    border-radius: 50px;
-    border: dashed tomato;
-}
-
-.introduction img:hover {
-    animation: grow ease 3s;
-}
-
-.introduction p {
-    padding: 20px;
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.text p {
-    margin: 0;
-    padding: 0;
-}
-
-@keyframes grow {
-    50% {
-        transform: scale(1.1);
-        padding: 0px;
-        margin: 10px;
-        margin-left: 17.5px;
-    }
-    100% {
-        transform: scale(1);
-        padding: 10px;
-        margin: 0px;
-    }
+.img-default {
+    border-radius: 10px;
+    height: 150px;
 }
 
 /* ============================================
-   RESPONSIVE — Mobile (max 768px)
+   RESPONSIVE — Mobile (max 600px)
    ============================================ */
-@media (max-width: 768px) {
-    .introduction {
-        flex-direction: column; /* text on top, profile pic below */
-        align-items: center;
-        padding-top: 10px;
+@media (max-width: 600px) {
+    .fll {
+        flex-wrap: wrap;       /* logos wrap instead of overflow */
+        justify-content: center;
     }
 
-    .introduction img {
-        width: 40%;
-        max-width: 160px;
-    }
-
-    .text {
-        padding: 10px;
-        gap: 12px;
-    }
-
-    .introduction p {
-        padding: 8px;
+    .img-default {
+        height: 100px;
     }
 }
 
@@ -74,8 +26,7 @@
    RESPONSIVE — Small phones (max 480px)
    ============================================ */
 @media (max-width: 480px) {
-    .introduction img {
-        width: 50%;
-        max-width: 130px;
+    .img-default {
+        height: 80px;
     }
 }

@@ -50,7 +50,7 @@
    ============================================ */
 @media (max-width: 768px) {
     .introduction {
-        flex-direction: column-reverse; /* profile pic on top, text below */
+        flex-direction: column; /* text on top, profile pic below */
         align-items: center;
         padding-top: 10px;
     }
@@ -58,6 +58,7 @@
     .introduction img {
         width: 40%;
         max-width: 160px;
+        height: auto !important;
     }
 
     .text {
