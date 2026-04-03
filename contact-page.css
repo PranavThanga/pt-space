@@ -21,12 +21,9 @@ label {
 
 form {
     max-width: 400px;
-    padding: 0 10px; /* added: slight padding so form doesn't touch screen edge */
+    padding: 0 10px;
 }
 
-/* ============================================
-   RESPONSIVE — Small phones (max 480px)
-   ============================================ */
 @media (max-width: 480px) {
     form {
         max-width: 100%;
@@ -34,7 +31,6 @@ form {
         box-sizing: border-box;
     }
 
-    /* Make all inputs stretch to fill the form width */
     .form-item {
         width: 100%;
         box-sizing: border-box;

@@ -8,23 +8,17 @@
     height: 150px;
 }
 
-/* ============================================
-   RESPONSIVE — Mobile (max 600px)
-   ============================================ */
 @media (max-width: 600px) {
     .fll {
-        flex-wrap: wrap;       /* logos wrap instead of overflow */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .img-default {
-        height: 100px;
+        max-height: 100px;
     }
 }
 
-/* ============================================
-   RESPONSIVE — Small phones (max 480px)
-   ============================================ */
 @media (max-width: 480px) {
     .img-default {
         height: 80px;

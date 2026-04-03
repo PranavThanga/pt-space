@@ -1,8 +1,8 @@
 .booklist-container {
     display: flex;
     flex-direction: column;
-    padding: 15px; /* added: breathing room from screen edge */
-    gap: 30px;     /* added: space between book entries */
+    padding: 15px;
+    gap: 30px;
 }
 
 .book {
@@ -22,9 +22,6 @@
     padding-right: 20px;
 }
 
-/* ============================================
-   RESPONSIVE — Tablet (max 768px)
-   ============================================ */
 @media (max-width: 768px) {
     .book {
         flex-direction: column;
@@ -44,9 +41,6 @@
     }
 }
 
-/* ============================================
-   RESPONSIVE — Small phones (max 480px)
-   ============================================ */
 @media (max-width: 480px) {
     .booklist-container {
         padding: 8px;

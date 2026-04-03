@@ -44,9 +44,6 @@ img:hover {
     border-left: 15px solid black;
 }
 
-/* ============================================
-   RESPONSIVE — Tablet (max 768px)
-   ============================================ */
 @media (max-width: 768px) {
     img {
         height: 150px;
@@ -67,20 +64,15 @@ img:hover {
     }
 }
 
-/* ============================================
-   RESPONSIVE — Small phones (max 480px)
-   ============================================ */
 @media (max-width: 480px) {
     img {
         height: 110px;
     }
 
-    /* Stack evolution chains vertically instead of horizontally */
     .evo-set {
         flex-direction: column;
     }
 
-    /* Rotate the arrow to point downward for vertical evo chains */
     .arrow {
         transform: rotate(90deg);
     }
