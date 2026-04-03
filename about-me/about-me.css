@@ -1,9 +1,32 @@
-.fll{
+.fll {
     display: flex;
     gap: 15px;
 }
 
-.img-default{
+.img-default {
     border-radius: 10px;
     height: 150px;
+}
+
+/* ============================================
+   RESPONSIVE — Mobile (max 600px)
+   ============================================ */
+@media (max-width: 600px) {
+    .fll {
+        flex-wrap: wrap;       /* logos wrap instead of overflow */
+        justify-content: center;
+    }
+
+    .img-default {
+        height: 100px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Small phones (max 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .img-default {
+        height: 80px;
+    }
 }

@@ -1,4 +1,4 @@
-.card-type{
+.card-type {
     display: flex;
     gap: 10px;
     padding-left: 10px;
@@ -6,7 +6,7 @@
     flex-wrap: wrap;
 }
 
-.pokemon{
+.pokemon {
     display: flex;
     gap: 25px;
     padding-left: 10px;
@@ -14,7 +14,7 @@
     flex-wrap: wrap;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,19 +27,65 @@
     align-items: center;
 }
 
-img{
+img {
     height: 250px;
     border-radius: 10px;
 }
 
-img:hover{
+img:hover {
     transform: scale(1.2);
 }
 
 .arrow {
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 15px solid black;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid black;
+}
+
+/* ============================================
+   RESPONSIVE — Tablet (max 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    img {
+        height: 150px;
+    }
+
+    .evo-set {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pokemon {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .card-type {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Small phones (max 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    img {
+        height: 110px;
+    }
+
+    /* Stack evolution chains vertically instead of horizontally */
+    .evo-set {
+        flex-direction: column;
+    }
+
+    /* Rotate the arrow to point downward for vertical evo chains */
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+    .pokemon {
+        gap: 10px;
+    }
 }

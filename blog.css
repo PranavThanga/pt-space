@@ -1,15 +1,15 @@
-.blog-overview-holder{
+.blog-overview-holder {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    border: 15px black;
+    padding: 15px; /* added: prevents cards from touching screen edge */
 }
 
-.blog-overview:hover{
+.blog-overview:hover {
     box-shadow: 5px 5px 5px palegoldenrod;
 }
 
-.blog-overview{
+.blog-overview {
     display: flex;
     flex-direction: column;
     width: 500px;
@@ -19,21 +19,49 @@
     gap: 2px;
 }
 
-.blog-overview img{
+.blog-overview img {
     max-width: 500px;
     max-height: 150px;
     object-position: top;
-    object-fit: cover;;
+    object-fit: cover;
 }
 
-.blog-overview img:hover{
-    max-height: 300px
+.blog-overview img:hover {
+    max-height: 300px;
 }
 
-.blog-overview p{
+.blog-overview p {
     font-size: medium;
     padding-left: 5px;
 }
 
+/* ============================================
+   RESPONSIVE — Tablet (max 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    .blog-overview {
+        width: 100%;   /* fill available width instead of fixed 500px */
+        height: auto;
+        min-height: 220px;
+    }
 
+    .blog-overview img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 180px;
+    }
+}
 
+/* ============================================
+   RESPONSIVE — Small phones (max 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .blog-overview-holder {
+        padding: 8px;
+        gap: 10px;
+    }
+
+    .blog-overview img {
+        max-height: 140px;
+    }
+}

@@ -1,107 +1,82 @@
 body {
   background-color: powderblue;
   max-width: auto;
-  margin: 5 auto;
+  margin: 5px auto; /* fix: was "5 auto" (invalid, missing unit) */
 }
-
+ 
 p, li {
   font-size: larger;
 }
-
+ 
 li {
   color: darkblue;
 }
-
-h2{
+ 
+h2 {
     border-bottom: 5px dotted deepskyblue;
 }
-
-p{
+ 
+p {
   line-height: 1.5;
 }
-
-/*header*/
-
+ 
+/* header */
 header {
   background-color: palegoldenrod;
   border: 5px dotted deepskyblue;
-  max-width: auto;
 }
-
+ 
 header div {
   display: flex;
   height: 50px;
-  width: auto;
   justify-content: space-evenly;
   align-items: center;
   padding-top: 0px;
 }
-
+ 
 header a {
   font-size: larger;
 }
-
+ 
 header h1 {
   color: tomato;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   padding-top: 20px;
 }
-
-a:link {
-  color: orangered;
-}
-
-a:hover {
-  transform: scale(1.1);
-  color:darkblue;
-}
-
-a:active {
-  color: darkblue;
-}
-
-a:visited {
-  color: orangered;
-}
-
-
-.left-align{
-  text-align: left;
-}
-
-.center-align{
-  text-align: center;
-}
-
-.cell{
+ 
+a:link   { color: orangered; }
+a:hover  { transform: scale(1.1); color: darkblue; }
+a:active { color: darkblue; }
+a:visited { color: orangered; }
+ 
+.left-align  { text-align: left; }
+.center-align { text-align: center; }
+ 
+.cell {
   border: black solid 2px;
-  padding: 4px, 8px;
+  padding: 4px 8px; /* fix: was "4px, 8px" (invalid comma) */
   width: 75px;
 }
-
-th, td{
-  text-align: center;
-}
-
+ 
+th, td { text-align: center; }
+ 
 /* Flexbox code */
-
-.flex-default{
+.flex-default {
     display: flex;
     padding-top: 25px;
     gap: 0;
 }
-
-.flex-default-text{
+ 
+.flex-default-text {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     max-width: 900px;
 }
-
-/* tti - Text to img in direction of screen */
-
-.tti-img{
+ 
+/* tti - Text to img */
+.tti-img {
     display: flex;
     flex-direction: column;
     padding-left: 30px;
@@ -110,10 +85,9 @@ th, td{
     padding-right: 100px;
     gap: 15px;
 }
-
-/* itt - img to text in direction of screen */
-
-.itt-img{
+ 
+/* itt - img to text */
+.itt-img {
     display: flex;
     flex-direction: column;
     padding-right: 30px;
@@ -121,4 +95,98 @@ th, td{
     margin-right: auto;
     padding-left: 100px;
     gap: 15px;
+}
+ 
+/* ============================================
+   RESPONSIVE — Tablet (max 900px)
+   ============================================ */
+@media (max-width: 900px) {
+    .tti-img {
+        padding-right: 20px;
+        padding-left: 15px;
+    }
+    .itt-img {
+        padding-left: 20px;
+        padding-right: 15px;
+    }
+}
+ 
+/* ============================================
+   RESPONSIVE — Mobile (max 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+ 
+    p, li {
+        font-size: medium;
+    }
+ 
+    header h1 {
+        font-size: 1.3rem;
+        padding-top: 10px;
+    }
+ 
+    /* Stack nav links and allow wrapping */
+    header div {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+        justify-content: center;
+    }
+ 
+    header a {
+        font-size: medium;
+    }
+ 
+    /* Stack side-by-side sections vertically */
+    .flex-default {
+        flex-direction: column;
+        padding-top: 15px;
+    }
+ 
+    .flex-default-text {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+ 
+    /* Remove heavy padding, center images */
+    .tti-img {
+        padding: 15px 10px;
+        margin: 0;
+        order: -1; /* Images appear above text on mobile */
+    }
+ 
+    .itt-img {
+        padding: 15px 10px;
+        margin: 0;
+    }
+ 
+    /* Shrink chess rating table cells */
+    .cell {
+        width: 55px;
+        font-size: small;
+        padding: 3px 4px;
+    }
+}
+ 
+/* ============================================
+   RESPONSIVE — Small phones (max 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.1rem;
+    }
+ 
+    h2 {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+ 
+    .cell {
+        width: 45px;
+        font-size: x-small;
+    }
 }

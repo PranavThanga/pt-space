@@ -4,16 +4,15 @@
     align-items: center;
 }
 
-.introduction img{
+.introduction img {
     padding: 10px;
     border-radius: 50px;
-    border: dashed tomato; 
+    border: dashed tomato;
 }
 
-.introduction img:hover{
+.introduction img:hover {
     animation: grow ease 3s;
 }
-
 
 .introduction p {
     padding: 20px;
@@ -27,22 +26,56 @@
     padding-right: 20px;
 }
 
-.text p{
+.text p {
     margin: 0;
     padding: 0;
 }
 
 @keyframes grow {
-    50%{
+    50% {
         transform: scale(1.1);
         padding: 0px;
         margin: 10px;
-        margin-left: 17.5px
+        margin-left: 17.5px;
     }
-
-    100%{
+    100% {
         transform: scale(1);
         padding: 10px;
         margin: 0px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Mobile (max 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    .introduction {
+        flex-direction: column-reverse; /* profile pic on top, text below */
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .introduction img {
+        width: 40%;
+        max-width: 160px;
+    }
+
+    .text {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .introduction p {
+        padding: 8px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE — Small phones (max 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .introduction img {
+        width: 50%;
+        max-width: 130px;
     }
 }

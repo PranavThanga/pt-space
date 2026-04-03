@@ -1,24 +1,50 @@
-label{
+label {
     color: darkblue;
     font-size: larger;
 }
 
-.section-div{
+.section-div {
     padding-bottom: 50px;
 }
 
-.distancer-div{
+.distancer-div {
     padding-bottom: 10px;
 }
 
-.form-item{
+.form-item {
     width: 300px;
 }
 
-.form-item:hover{
+.form-item:hover {
     background-color: azure;
 }
 
-form{
+form {
     max-width: 400px;
+    padding: 0 10px; /* added: slight padding so form doesn't touch screen edge */
+}
+
+/* ============================================
+   RESPONSIVE — Small phones (max 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    form {
+        max-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    /* Make all inputs stretch to fill the form width */
+    .form-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    label {
+        font-size: medium;
+    }
+
+    .section-div {
+        padding-bottom: 30px;
+    }
 }
