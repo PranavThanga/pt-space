@@ -4,7 +4,7 @@ body {
   margin: 5px auto; /* fix: was "5 auto" (invalid, missing unit) */
 }
 
-p, li {font-size: 1.5rem;}
+p, li {font-size: 1.3rem;}
 
 li {color: darkblue;}
 
@@ -26,7 +26,7 @@ header div {
   padding-top: 0px;
 }
 
-header a { font-size: 1.8rem;}
+header a { font-size: 1.4rem;}
 
 header h1 {
   color: tomato;
@@ -89,9 +89,6 @@ th, td { text-align: center; }
     gap: 15px;
 }
 
-/* ============================================
-   RESPONSIVE — Tablet (max 900px)
-   ============================================ */
 @media (max-width: 900px) {
     .tti-img {
         padding-right: 20px;
@@ -103,24 +100,20 @@ th, td { text-align: center; }
     }
 }
 
-/* ============================================
-   RESPONSIVE — Mobile (max 768px)
-   ============================================ */
 @media (max-width: 768px) {
     body {
         margin: 0;
     }
 
     p, li {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         padding-top: 10px;
     }
 
-    /* Stack nav links and allow wrapping */
     header div {
         height: auto;
         flex-wrap: wrap;
@@ -130,10 +123,9 @@ th, td { text-align: center; }
     }
 
     header a {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
-    /* Stack side-by-side sections vertically */
     .flex-default {
         flex-direction: column;
         padding-top: 15px;
@@ -142,14 +134,13 @@ th, td { text-align: center; }
     .flex-default-text {
         max-width: 100%;
         padding: 0 10px;
-        order: 0; /* always first (text on top) */
+        order: 0;
     }
 
     h2 {
         padding-left: 12px;
     }
 
-    /* Images always below text on mobile */
     .tti-img {
         padding: 15px 10px;
         margin: 0;
@@ -162,7 +153,6 @@ th, td { text-align: center; }
         order: 1;
     }
 
-    /* Shrink images — !important overrides inline width/height HTML attributes */
     .tti-img img,
     .itt-img img {
         max-width: 85% !important;
@@ -171,7 +161,6 @@ th, td { text-align: center; }
         max-height: 220px;
     }
 
-    /* Shrink chess rating table cells */
     .cell {
         width: 55px;
         font-size: small;
@@ -179,18 +168,17 @@ th, td { text-align: center; }
     }
 }
 
-/* ============================================
-   RESPONSIVE — Small phones (max 480px)
-   ============================================ */
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
+    header h1 {font-size: 2rem;}
 
     h2 {
         font-size: 1.5rem;
         padding: 0 10px;
     }
+
+    header a{font-size: 1.3rem;}
+
+    p, li{font-size: 1.25rem;}
 
     .cell {
         width: 45px;
