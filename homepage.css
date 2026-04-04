@@ -7,7 +7,7 @@
 .introduction img {
     padding: 2px;
     border-radius: 50px;
-    border: dashed tomato;
+    border: dashed #E05C3A;
 }
 
 .introduction img:hover {
