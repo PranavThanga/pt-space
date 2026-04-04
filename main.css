@@ -4,21 +4,13 @@ body {
   margin: 5px auto; /* fix: was "5 auto" (invalid, missing unit) */
 }
 
-p, li {
-  font-size: 1.75rem;
-}
+p, li {font-size: 1.5rem;}
 
-li {
-  color: darkblue;
-}
+li {color: darkblue;}
 
-h2 {
-    border-bottom: 5px dotted deepskyblue;
-}
+h2 {border-bottom: 5px dotted deepskyblue;}
 
-p {
-  line-height: 1.5;
-}
+p {line-height: 1.5;}
 
 /* header */
 header {
@@ -34,9 +26,7 @@ header div {
   padding-top: 0px;
 }
 
-header a {
-  font-size: larger;
-}
+header a { font-size: larger;}
 
 header h1 {
   color: tomato;
