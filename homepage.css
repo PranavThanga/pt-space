@@ -33,7 +33,7 @@
 
 @media (max-width: 768px) {
     .introduction {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         padding-top: 10px;
     }
