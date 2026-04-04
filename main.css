@@ -26,13 +26,14 @@ header div {
   padding-top: 0px;
 }
 
-header a { font-size: larger;}
+header a { font-size: 1.8rem;}
 
 header h1 {
   color: tomato;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   padding-top: 20px;
+  font-size: 2.2rem;
 }
 
 a:link   { color: orangered; }
@@ -129,7 +130,7 @@ th, td { text-align: center; }
     }
 
     header a {
-        font-size: medium;
+        font-size: 1.6rem;
     }
 
     /* Stack side-by-side sections vertically */
