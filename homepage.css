@@ -40,7 +40,7 @@
 
     .introduction img {
         width: 40%;
-        max-width: 160px;
+        max-width: 500px;
         height: auto !important;
     }
 
@@ -57,6 +57,6 @@
 @media (max-width: 480px) {
     .introduction img {
         width: 50%;
-        max-width: 130px;
+        max-width: 200px;
     }
 }
