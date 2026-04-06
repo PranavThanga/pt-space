@@ -134,7 +134,6 @@ a:active { color: #1A3A4A; }
 }
 
 .container {
-    max-width: 1100px;
     margin: 0 auto;
     padding: 0 clamp(16px, 4vw, 48px);
     box-sizing: border-box;
