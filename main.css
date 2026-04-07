@@ -133,6 +133,11 @@ a:active { color: #1A3A4A; }
     gap: 15px;
 }
 
+.container{
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
 @media (max-width: 900px) {
     .tti-img {
         padding-right: 20px;
