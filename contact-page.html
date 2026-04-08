@@ -1,57 +1,80 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-        <head>
-            <meta charset="UTF-8"/>
-            <meta name="description" content="Contact Pranav Thangakumar."/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <link rel="stylesheet" href="main.css"/>
-            <link rel="stylesheet" href="contact-page.css"/>
-            <title>Contact Page</title>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Contact Pranav Thangakumar."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="main.css"/>
+        <link rel="stylesheet" href="contact-page.css"/>
+        <title>Contact Page</title>
+    </head>
 
-        </head>
-        <body>
-            <header>
-                <h1>Welcome to the CONTACT PAGE!</h1>
-                <div id="links">
-                    <a href="index.html">Homepage</a>
-                    <div class="dropdown">
-                        <a href="about-me/about-me.html">About Me ▾</a>
-                        <div class="dropdown-menu">
-                            <a href="about-me/booklist.html">Booklist</a>
-                            <a href="about-me/pokemon_deck.html">Pokédeck</a>
-                        </div>
+    <body>
+        <header>
+            <h1>Welcome to the CONTACT PAGE!</h1>
+            <div id="links">
+                <a href="index.html">Homepage</a>
+                <div class="dropdown">
+                    <a href="about-me/about-me.html">About Me ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="about-me/booklist.html">Booklist</a>
+                        <a href="about-me/pokemon_deck.html">Pokédeck</a>
                     </div>
-                    <a href="contact-page.html">Contact Me</a>
-                    <a href="blog-homepage.html">Blogpage</a>
                 </div>
-                
-            </header>
+                <a href="contact-page.html">Contact Me</a>
+                <a href="blog-homepage.html">Blogpage</a>
+            </div>
+        </header>
 
-            <div class="container">
-                <h2 class="form-title">Contact Me!</h2>
+        <div class="container">
+            <h2>Contact Me!</h2>
+            <div class="contact-layout">
+
+                <div class="about-card">
+                    <img src="images/profile_pic.svg" alt="Pranav's profile picture">
+                    <h3>Pranav Thangakumar</h3>
+                    <p>I'm Pranav, a curious and passionate learner based in Sammamish.</p>
+                    <hr>
+                    <div class="facts">
+                        <p>♟️ Chess competitor</p>
+                        <p>🤖 FLL / VEX Roboticist</p>
+                        <p>📚 Avid reader</p>
+                        <p>🎮 Pokémon fan</p>
+                    </div>
+                        
+                    <hr>
+                    <div class="social-links">
+                        <a href="https://www.chess.com/member/rampaging_king" target="_blank">Chess.com</a>
+                        <a href="https://lichess.org/@/SupersonicChessKing" target="_blank">Lichess</a>
+                        <a href="https://github.com/pranavthanga" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
                 <form action="https://formspree.io/f/xreoavgq" method="post">
-                    <input type="text" name="name" class="form-item" required placeholder="Name..."> 
-                    <br><br>  
-                    
-                    <select name="reason for contact" class="form-item">
-                        <option value="" disabled selected>Select An Option...</option>
-                        <option value="Buisness">Buisness</option>
+                    <input type="text" name="name" class="form-item" placeholder="Your name..." required>
+                    <br><br>
+
+                    <select name="reason for contact" class="form-item" required>
+                        <option value="" disabled selected>Select a reason...</option>
+                        <option value="Business">Business</option>
                         <option value="Personal">Personal Matters</option>
                         <option value="Feedback">Feedback</option>
                         <option value="Other">Other</option>
                     </select>
                     <br><br>
 
-                    <textarea id="message" name="message" class="form-item" required placeholder="Enter your message..."></textarea>
+                    <textarea name="message" class="form-item" placeholder="Your message..." required></textarea>
                     <br><br>
 
-                    <input type="email" name="email" class="form-item" required placeholder="Email (for response purposes only)">
+                    <input type="email" name="email" class="form-item" placeholder="Your email... (response purposes only)" required>
                     <br><br>
 
                     <button type="submit">Submit</button>
                 </form>
-            </div>
 
-        </body>
-    </html>
+            </div>
+        </div>
+
+    </body>
+</html>
