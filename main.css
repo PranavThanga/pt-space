@@ -1,23 +1,9 @@
-body {
-  background-color: powderblue;
-  max-width: auto;
-  margin: 5px auto;
+p {
+    font-size: 1.3rem; 
+    line-height: 1.5;
 }
-
-p, li {font-size: 1.3rem;}
-
-li {color: darkblue;}
-
-h2 {border-bottom: 5px dotted deepskyblue;}
-
-p {line-height: 1.5;}
 
 /* header */
-header {
-  background-color: palegoldenrod;
-  border: 5px dotted deepskyblue;
-}
-
 header div {
   display: flex;
   height: 50px;
@@ -29,7 +15,6 @@ header div {
 header a { font-size: 1.4rem;}
 
 header h1 {
-  color: tomato;
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   padding-top: 20px;
@@ -55,14 +40,14 @@ body {
   color: #1A3A4A;
 }
 
-p, li { color: #1A3A4A; }
-li { color: #1A3A4A; }
+p { color: #1A3A4A; }
 h2 { border-bottom: 5px dotted #1A7FA8; }
 
 header {
   background-color: #F5E6C8;
   border: 5px dotted #1A7FA8;
 }
+
 header h1 { color: #E05C3A; }
 
 a:link   { color: #E05C3A; }
@@ -260,8 +245,9 @@ a:active { color: #1A3A4A; }
 
     header {
         background-color: #122B36;
-        border: 5px dotted #2AAECF;
+        border-color: #2AAECF;
     }
+    
     header h1 { color: #FF6B4A; }
 
     a:link   { color: #FF6B4A; }
