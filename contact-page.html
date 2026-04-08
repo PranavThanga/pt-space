@@ -31,14 +31,11 @@
             <div class="container">
                 <h2>Contact Me!</h2>
                 <form action="https://formspree.io/f/xreoavgq" method="post">
-                    <label for="name">Name:</label>
-                    <br>
-                    <input type="text" name="name" class="form-item" required> 
+                    <input type="text" name="name" class="form-item" required placeholder="Name..."> 
                     <br><br>  
                     
-                    <label for="reason for contact">Reason for contact:</label>
-                    <br>
                     <select name="reason for contact" class="form-item">
+                        <option value="" disabled selected>Select An Option...</option>
                         <option value="Buisness">Buisness</option>
                         <option value="Personal">Personal Matters</option>
                         <option value="Feedback">Feedback</option>
@@ -46,14 +43,10 @@
                     </select>
                     <br><br>
 
-                    <label for="message">Message:</label>
-                    <br>
-                    <textarea id="message" name="message" class="form-item" required></textarea>
+                    <textarea id="message" name="message" class="form-item" required placeholder="Enter your message..."></textarea>
                     <br><br>
 
-                    <label for="email">Email (used to reply only):</label>
-                    <br>
-                    <input type="email" name="email" class="form-item" required>
+                    <input type="email" name="email" class="form-item" required placeholder="Email (for response purposes only)">
                     <br><br>
 
                     <button type="submit">Submit</button>

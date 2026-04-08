@@ -1,9 +1,4 @@
 /* ── Light mode: Ocean Breeze ── */
-label {
-    color: #1A3A4A;
-    font-size: 1.7rem;
-}
-
 .form-item {
     width: 300px;
     background-color: #F5E6C8;
@@ -28,7 +23,10 @@ form button[type="submit"] {
     border-radius: 6px;
 }
 
-form button[type="submit"]:hover { background-color: #E05C3A; }
+form button:hover{
+    background-color: #E05C3A;
+    transform: scale(1.1);
+}
 
 /* ── Dark mode: Deep Ocean ── */
 @media (prefers-color-scheme: dark) {
