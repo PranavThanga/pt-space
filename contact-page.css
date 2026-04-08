@@ -1,9 +1,13 @@
-/* ── Light mode: Ocean Breeze ── */
 .form-item {
-    width: 300px;
+    width: 100%;
     background-color: #F5E6C8;
     color: #1A3A4A;
     border: 2px solid #1A7FA8;
+    box-sizing: border-box;
+}
+
+.form-title {
+    text-align: center !important;
 }
 
 .form-item:hover { background-color: #E8F4F8; }
@@ -11,6 +15,7 @@
 form {
     max-width: 400px;
     padding: 0 10px;
+    margin: 0 auto;
 }
 
 form button[type="submit"] {
