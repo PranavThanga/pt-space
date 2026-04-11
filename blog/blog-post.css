@@ -32,11 +32,10 @@
 
 .back-link {
     display: inline-block;
-    padding: 10px 15px;
     font-size: 1rem;
     color: #E05C3A;
     text-decoration: none;
-    margin: 15px;
+    margin-top: 15px;
 }
 
 .back-link:hover {
