@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Pranav's Blog"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../main.css"/>
+        <link rel="stylesheet" href="blog-post.css"/>
+        <title>Blog Post</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Pranav's Blog</h1>
+            <div id="links">
+                <a href="index.html">Homepage</a>
+                <div class="dropdown">
+                    <a href="about-me/about-me.html">About Me ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="about-me/booklist.html">Booklist</a>
+                        <a href="about-me/pokemon_deck.html">Pokédeck</a>
+                    </div>
+                </div>
+                <a href="contact-page.html">Contact Me</a>
+                <a href="blog-homepage.html">Blogpage</a>
+            </div>
+        </header>
+
+        <div class="container">
+
+            <a href="blog-homepage.html" class="back-link">← Back to all posts</a>
+
+            <div class="post-header">
+                <!-- JS fills these in from blogs.json -->
+                <h2 id="post-title">Loading...</h2>
+                <p class="post-date" id="post-date"></p>
+            </div>
+
+            <div id="post-content">
+                <!-- JS fetches and injects the matching blogs/*.html file here -->
+            </div>
+
+        </div>
+
+        <script src="blog-post.js" defer></script>
+    </body>
+
+</html>

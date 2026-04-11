@@ -1,0 +1,63 @@
+.post-header {
+    padding: 20px 15px 10px;
+    border-bottom: 5px dotted #1A7FA8;
+    margin-bottom: 20px;
+}
+
+.post-header h2 {
+    border-bottom: none;   /* override main.css — we're using the div border instead */
+    margin: 0 0 6px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #E05C3A;
+    font-size: 2rem;
+}
+
+.post-date {
+    color: #1A7FA8;
+    font-size: 1rem;
+    margin: 0;
+}
+
+#post-content {
+    padding: 10px 15px 40px;
+    max-width: 860px;
+}
+
+#post-content h3 {
+    color: #E05C3A;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
+    margin-bottom: 6px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #E05C3A;
+    text-decoration: none;
+    margin: 15px;
+}
+
+.back-link:hover {
+    color: #1A3A4A;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .post-header h2 { font-size: 1.6rem; }
+    #post-content { padding: 10px 10px 30px; }
+}
+
+@media (max-width: 480px) {
+    .post-header h2 { font-size: 1.3rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+    .post-header { border-bottom-color: #2AAECF; }
+    .post-header h2 { color: #FF6B4A; }
+    .post-date { color: #2AAECF; }
+    #post-content h3 { color: #FF6B4A; }
+    .back-link { color: #FF6B4A; }
+    .back-link:hover { color: #E8F4F8; }
+}
