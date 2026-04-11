@@ -28,6 +28,10 @@
     max-height: 300px;
 }
 
+.blog-overview a:hover {
+    transform: none;
+}
+
 .blog-overview p {
     font-size: medium;
     padding-left: 5px;
