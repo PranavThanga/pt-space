@@ -17,6 +17,7 @@ fetch('blog-content/blogs.json')
       card.innerHTML = `
         <a href="blog-post.html?id=${post.id}">
           <img src="${post.thumbnail}" alt="${post.title}">
+          <h3>${post.title}>
           <p>${post.blurb}</p>
           <p class="post-date">Published on: ${post.date}</p>
         </a>
