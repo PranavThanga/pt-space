@@ -37,6 +37,10 @@
     padding-left: 5px;
 }
 
+.blog-overview h3 {
+    padding-left: 5px;
+}
+
 @media (max-width: 768px) {
     .blog-overview {
         width: 100%;
