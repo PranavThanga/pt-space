@@ -22,6 +22,7 @@ if (!postId) {
       }
 
       // Step 3: Fill in the metadata from JSON
+      document.getElementById('page-heading').textContent = post.title;
       document.getElementById('post-title').textContent = post.title;
       document.getElementById('post-date').textContent = 'Published: ' + post.date;
       document.title = post.title; // Updates the browser tab title too
