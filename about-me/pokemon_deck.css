@@ -1,3 +1,70 @@
+/* ─────────────────────────────────────────────
+   DECK TABS
+───────────────────────────────────────────── */
+
+.deck-tabs-wrapper {
+    padding: 20px 10px 0;
+}
+
+.deck-tabs-wrapper h2 {
+    border-bottom: none;
+    margin-bottom: 8px;
+}
+
+#deck-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 10px 0;
+    border-bottom: 3px dotted #1A7FA8;
+    padding-bottom: 12px;
+}
+
+.deck-tab {
+    background: none;
+    border: 2px solid #1A7FA8;
+    border-radius: 8px;
+    padding: 7px 20px;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    color: #1A3A4A;
+    opacity: 0.45;
+    transition: opacity 0.25s ease, transform 0.2s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.deck-tab:hover:not(.active) {
+    opacity: 0.75;
+    transform: scale(1.05);
+}
+
+.deck-tab.active {
+    opacity: 1;
+    font-weight: bold;
+    border-color: #E05C3A;
+    color: #E05C3A;
+    border-style: dashed;
+}
+
+/* ─────────────────────────────────────────────
+   DECK CONTENT FADE TRANSITION
+───────────────────────────────────────────── */
+
+#deck-content {
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#deck-content.deck-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─────────────────────────────────────────────
+   CARD GRID LAYOUTS  (unchanged from original)
+───────────────────────────────────────────── */
+
 .card-type {
     display: flex;
     gap: 10px;
@@ -44,6 +111,34 @@ img:hover {
     border-left: 15px solid black;
 }
 
+/* ─────────────────────────────────────────────
+   DARK MODE
+───────────────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+    .deck-tab {
+        color: #E8F4F8;
+        border-color: #2AAECF;
+    }
+
+    .deck-tab.active {
+        color: #FF6B4A;
+        border-color: #FF6B4A;
+    }
+
+    #deck-tabs {
+        border-bottom-color: #2AAECF;
+    }
+
+    .arrow {
+        border-left-color: #E8F4F8;
+    }
+}
+
+/* ─────────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────────── */
+
 @media (max-width: 768px) {
     img {
         height: 150px;
@@ -62,6 +157,16 @@ img:hover {
     .card-type {
         justify-content: center;
     }
+
+    #deck-tabs {
+        gap: 6px;
+        padding: 8px 8px 10px;
+    }
+
+    .deck-tab {
+        font-size: 1rem;
+        padding: 6px 14px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -79,5 +184,10 @@ img:hover {
 
     .pokemon {
         gap: 10px;
+    }
+
+    .deck-tab {
+        font-size: 0.95rem;
+        padding: 5px 12px;
     }
 }
