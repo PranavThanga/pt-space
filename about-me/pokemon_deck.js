@@ -34,9 +34,19 @@ const decks = {
       { name: "Jacq",          img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Jacq.png",          count: 1 },
       { name: "Larry",         img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Larry.png",         count: 1 },
     ],
-    // Pokémon: each entry is either a single card OR an evo chain.
-    // Single:   { name, img, count }
-    // Evo set:  { evo: [ {name, img, count}, ... ] }
+    // Pokémon entry types:
+    //
+    // Single card:
+    //   { name, img, count }
+    //
+    // Linear evo chain:
+    //   { evo: [ card, card, card ] }
+    //
+    // Branching evo — different Pokémon from same base ("or"):
+    //   { evo: [ card, { split: "or", options: [ card, card ] } ] }
+    //
+    // Same Pokémon, different prints ("and"):
+    //   { evo: [ card, { split: "and", options: [ card, card ] } ] }
     "Pokémon": [
       { evo: [
           { name: "Fuecoco",       img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Fuecoco.png",    count: 1 },
@@ -59,9 +69,9 @@ const decks = {
           { name: "Clefairy", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Clefairy.png", count: 1 },
           { name: "Clefable", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Clefable.png", count: 1 },
       ]},
-      { name: "Sigilyph",   img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Sigilyph.png",    count: 1 },
+      { name: "Sigilyph",    img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Sigilyph.png",    count: 1 },
       { name: "Scream Tail", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Scream_Tail.png", count: 1 },
-      { name: "Chimecho",   img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Chimecho.png",    count: 1 },
+      { name: "Chimecho",    img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Chimecho.png",    count: 1 },
       { evo: [
           { name: "Cutiefly", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Cutiefly.png",  count: 1 },
           { name: "Ribombee", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Ribombee.png",  count: 1 },
@@ -73,7 +83,7 @@ const decks = {
 
 
   "Fire": {
-    "Energies": [,
+    "Energies": [
       { name: "Fire Energy", img: "../images/about_me/Pokemon/Fire/Fire_Energy.jpg", count: 18 },
     ],
     "Items": [
@@ -98,9 +108,6 @@ const decks = {
       { name: "Larry",         img: "../images/about_me/Pokemon/Fire/Larry.png",         count: 1 },
       { name: "Firebreather",  img: "../images/about_me/Pokemon/Fire/Firebreather.png",  count: 1 },
     ],
-    // Pokémon: each entry is either a single card OR an evo chain.
-    // Single:   { name, img, count }
-    // Evo set:  { evo: [ {name, img, count}, ... ] }
     "Pokémon": [
       { evo: [
           { name: "Fuecoco",       img: "../images/about_me/Pokemon/Fire/Fuecoco.png",    count: 1 },
@@ -113,26 +120,27 @@ const decks = {
           { name: "Infernape", img: "../images/about_me/Pokemon/Fire/Infernape.png", count: 1 },
       ]},
       { evo: [
-          { name: "Litwick",      img: "../images/about_me/Pokemon/Fire/Litwick.png",    count: 1 },
-          { name: "Lampent",      img: "../images/about_me/Pokemon/Fire/Lampent.png",    count: 1 },
-          { name: "Chandelure",   img: "../images/about_me/Pokemon/Fire/Chandelure.png", count: 1 },
+          { name: "Litwick",    img: "../images/about_me/Pokemon/Fire/Litwick.png",    count: 1 },
+          { name: "Lampent",    img: "../images/about_me/Pokemon/Fire/Lampent.png",    count: 1 },
+          { name: "Chandelure", img: "../images/about_me/Pokemon/Fire/Chandelure.png", count: 1 },
       ]},
       { evo: [
           { name: "Clefairy", img: "../images/about_me/Pokemon/Fire/Clefairy.png", count: 1 },
           { name: "Clefable", img: "../images/about_me/Pokemon/Fire/Clefable.png", count: 1 },
       ]},
       { evo: [
-          { name: "Cutiefly", img: "../images/about_me/Pokemon/Fire/Cutiefly.png",  count: 2 },
-          { name: "Ribombee", img: "../images/about_me/Pokemon/Fire/Ribombee.png",  count: 2 },
+          { name: "Cutiefly", img: "../images/about_me/Pokemon/Fire/Cutiefly.png", count: 2 },
+          { name: "Ribombee", img: "../images/about_me/Pokemon/Fire/Ribombee.png", count: 2 },
       ]},
+      // Two different Charcadet prints, each evolving into a different Pokémon
       { evo: [
           { split: "and", options: [
-            { name: "Charcadet", img: "../images/about_me/Pokemon/Fire/Charcadet_1.png", count: 1 },
-            { name: "Charcadet", img: "../images/about_me/Pokemon/Fire/Charcadet_2.png", count: 1 },
+              { name: "Charcadet", img: "../images/about_me/Pokemon/Fire/Charcadet_1.png", count: 1 },
+              { name: "Charcadet", img: "../images/about_me/Pokemon/Fire/Charcadet_2.png", count: 1 },
           ]},
           { split: "or", options: [
-              { name: "Ceruledge",  img: "../images/about_me/Pokemon/Fire/Ceruledge.png",  count: 1 },
-              { name: "Armarouge",  img: "../images/about_me/Pokemon/Fire/Armarouge.png",  count: 1 },
+              { name: "Ceruledge", img: "../images/about_me/Pokemon/Fire/Ceruledge.png", count: 1 },
+              { name: "Armarouge", img: "../images/about_me/Pokemon/Fire/Armarouge.png", count: 1 },
           ]},
       ]},
       // Scorbunny evolves into two different Cinderace prints
@@ -143,10 +151,12 @@ const decks = {
               { name: "Cinderace", img: "../images/about_me/Pokemon/Fire/Cinderace_2.png", count: 1 },
           ]},
       ]},
-      { name: "Reshiram ex", img:"../images/about_me/Pokemon/Fire/Reshiram_ex.png", count: 1 },
-      { name: "Volcanion",   img:"../images/about_me/Pokemon/Fire/Volcanion.png",   count: 1 },
-    ]},
-}
+      { name: "Reshiram ex", img: "../images/about_me/Pokemon/Fire/Reshiram_ex.png", count: 1 },
+      { name: "Volcanion",   img: "../images/about_me/Pokemon/Fire/Volcanion.png",   count: 1 },
+    ],
+  },
+
+};
 
   // ── TEMPLATE ──────────────────────────────────
   // Uncomment and fill in to add a new deck:
@@ -159,12 +169,35 @@ const decks = {
   //   "Pokémon Tools": [],
   //   "Supporters": [],
   //   "Pokémon": [
-  //     { name: "Squirtle",  img: "../images/...", count: 1 },
+  //
+  //     // Single card:
+  //     { name: "Squirtle", img: "../images/...", count: 1 },
+  //
+  //     // Linear evo chain:
   //     { evo: [
-  //         { name: "Squirtle",   img: "../images/...", count: 1 },
-  //         { name: "Wartortle",  img: "../images/...", count: 1 },
-  //         { name: "Blastoise",  img: "../images/...", count: 1 },
+  //         { name: "Squirtle",  img: "../images/...", count: 1 },
+  //         { name: "Wartortle", img: "../images/...", count: 1 },
+  //         { name: "Blastoise", img: "../images/...", count: 1 },
   //     ]},
+  //
+  //     // Branching evo — different Pokémon from same base ("or"):
+  //     { evo: [
+  //         { name: "Eevee", img: "../images/...", count: 1 },
+  //         { split: "or", options: [
+  //             { name: "Vaporeon", img: "../images/...", count: 1 },
+  //             { name: "Flareon",  img: "../images/...", count: 1 },
+  //         ]},
+  //     ]},
+  //
+  //     // Same Pokémon, different prints ("and"):
+  //     { evo: [
+  //         { name: "Ralts", img: "../images/...", count: 1 },
+  //         { split: "and", options: [
+  //             { name: "Gardevoir", img: "../images/...", count: 1 },
+  //             { name: "Gardevoir", img: "../images/...alt.png", count: 1 },
+  //         ]},
+  //     ]},
+  //
   //   ],
   // },
 
@@ -189,17 +222,52 @@ function buildSingleCard(card) {
   return div;
 }
 
-/** Creates an .evo-set element for a chain of cards */
+/** Creates an .evo-set element, handling linear chains and split nodes.
+ *
+ *  Chain entries are either:
+ *    - A plain card:  { name, img, count }
+ *    - A split node:  { split: "or" | "and", options: [ card, card, ... ] }
+ *
+ *  "or"  → different Pokémon that branch from the same base
+ *  "and" → same Pokémon name but different card prints
+ *
+ *  Arrow placement: one arrow before every entry except the very first.
+ */
 function buildEvoSet(chain) {
   const set = document.createElement("div");
   set.className = "evo-set";
 
-  chain.forEach((card, i) => {
-    set.appendChild(buildSingleCard(card));
-    if (i < chain.length - 1) {
+  chain.forEach((entry, i) => {
+
+    // Add an arrow before every entry except the very first
+    if (i > 0) {
       const arrow = document.createElement("div");
       arrow.className = "arrow";
       set.appendChild(arrow);
+    }
+
+    if (entry.split) {
+      // ── Branch container (column of cards with "or"/"and" between them) ──
+      const branch = document.createElement("div");
+      branch.className = "evo-branch";
+
+      entry.options.forEach((card, j) => {
+        branch.appendChild(buildSingleCard(card));
+
+        // Connector label between options, not after the last one
+        if (j < entry.options.length - 1) {
+          const connector = document.createElement("div");
+          connector.className = `evo-connector evo-connector--${entry.split}`;
+          connector.textContent = entry.split;
+          branch.appendChild(connector);
+        }
+      });
+
+      set.appendChild(branch);
+
+    } else {
+      // ── Regular single card ──
+      set.appendChild(buildSingleCard(entry));
     }
   });
 
