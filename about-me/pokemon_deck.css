@@ -96,6 +96,36 @@
     align-items: center;
 }
 
+/* Column of cards that share a base evolution */
+.evo-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+/* "or" / "and" label between branching cards */
+.evo-connector {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 20px;
+    line-height: 1;
+}
+
+.evo-connector--or {
+    background-color: #fde8df;
+    color: #E05C3A;
+    border: 1px solid #E05C3A;
+}
+
+.evo-connector--and {
+    background-color: #ddf0f8;
+    color: #1A7FA8;
+    border: 1px solid #1A7FA8;
+}
+
 img {
     height: 250px;
     border-radius: 10px;
@@ -118,6 +148,18 @@ img:hover {
 ───────────────────────────────────────────── */
 
 @media (prefers-color-scheme: dark) {
+    .evo-connector--or {
+        background-color: #3d1a10;
+        color: #FF6B4A;
+        border-color: #FF6B4A;
+    }
+
+    .evo-connector--and {
+        background-color: #0a2a36;
+        color: #2AAECF;
+        border-color: #2AAECF;
+    }
+
     #deck-tabs {
         border-bottom-color: #2AAECF;
     }

@@ -8,65 +8,145 @@ const decks = {
 
   "Fire-Fighting-Psychic": {
     "Energies": [
-      { name: "Strong Energy",   img: "../images/about_me/Pokemon/Strong_Energy.png",   count: 1 },
-      { name: "Fighting Energy", img: "../images/about_me/Pokemon/Fighting_Energy.webp", count: 8 },
-      { name: "Fire Energy",     img: "../images/about_me/Pokemon/Fire_Energy.jpg",      count: 9 },
-      { name: "Psychic Energy",  img: "../images/about_me/Pokemon/Psychic_Energy.jpg",   count: 5 },
+      { name: "Strong Energy",   img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Strong_Energy.png",   count: 1 },
+      { name: "Fighting Energy", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Fighting_Energy.webp", count: 8 },
+      { name: "Fire Energy",     img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Fire_Energy.jpg",      count: 9 },
+      { name: "Psychic Energy",  img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Psychic_Energy.jpg",   count: 5 },
     ],
     "Items": [
-      { name: "Rare Candy",       img: "../images/about_me/Pokemon/Rare_Candy.png",        count: 2 },
-      { name: "Great Ball",       img: "../images/about_me/Pokemon/Great_Ball.png",         count: 2 },
-      { name: "Switch",           img: "../images/about_me/Pokemon/Switch.png",             count: 2 },
-      { name: "Lost Vacuum",      img: "../images/about_me/Pokemon/Lost_Vacuum.png",        count: 1 },
-      { name: "Pokémon Catcher",  img: "../images/about_me/Pokemon/Pokemon_Catcher.png",   count: 1 },
-      { name: "Pokégear 3.0",     img: "../images/about_me/Pokemon/pokegear_3_0.png",       count: 1 },
+      { name: "Rare Candy",       img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Rare_Candy.png",        count: 2 },
+      { name: "Great Ball",       img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Great_Ball.png",         count: 2 },
+      { name: "Switch",           img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Switch.png",             count: 2 },
+      { name: "Lost Vacuum",      img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Lost_Vacuum.png",        count: 1 },
+      { name: "Pokémon Catcher",  img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Pokemon_Catcher.png",   count: 1 },
+      { name: "Pokégear 3.0",     img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/pokegear_3_0.png",       count: 1 },
     ],
     "Pokémon Tools": [
-      { name: "Rock Chestplate", img: "../images/about_me/Pokemon/Rock_Chestplate.png", count: 1 },
-      { name: "Buff Padding",    img: "../images/about_me/Pokemon/Buff_Padding.png",    count: 1 },
+      { name: "Rock Chestplate", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Rock_Chestplate.png", count: 1 },
+      { name: "Buff Padding",    img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Buff_Padding.png",    count: 1 },
     ],
     "Supporters": [
-      { name: "Kindler",       img: "../images/about_me/Pokemon/Kindler.png",       count: 2 },
-      { name: "Mela",          img: "../images/about_me/Pokemon/Mela.png",          count: 1 },
-      { name: "Cyllene",       img: "../images/about_me/Pokemon/Cyllene.png",       count: 1 },
-      { name: "Ninja Boy",     img: "../images/about_me/Pokemon/Ninja_Boy.png",     count: 1 },
-      { name: "Boss's Orders", img: "../images/about_me/Pokemon/Boss's_Orders.png", count: 1 },
-      { name: "Jacq",          img: "../images/about_me/Pokemon/Jacq.png",          count: 1 },
+      { name: "Kindler",       img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Kindler.png",       count: 2 },
+      { name: "Mela",          img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Mela.png",          count: 1 },
+      { name: "Cyllene",       img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Cyllene.png",       count: 1 },
+      { name: "Ninja Boy",     img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Ninja_Boy.png",     count: 1 },
+      { name: "Boss's Orders", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Boss's_Orders.png", count: 1 },
+      { name: "Jacq",          img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Jacq.png",          count: 1 },
+      { name: "Larry",         img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Larry.png",         count: 1 },
     ],
     // Pokémon: each entry is either a single card OR an evo chain.
     // Single:   { name, img, count }
     // Evo set:  { evo: [ {name, img, count}, ... ] }
     "Pokémon": [
       { evo: [
-          { name: "Fuecoco",       img: "../images/about_me/Pokemon/Fuecoco.png",    count: 1 },
-          { name: "Crocalor",      img: "../images/about_me/Pokemon/Crocalor.png",   count: 1 },
-          { name: "Skeledirge ex", img: "../images/about_me/Pokemon/Skeledirge.png", count: 1 },
+          { name: "Fuecoco",       img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Fuecoco.png",    count: 1 },
+          { name: "Crocalor",      img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Crocalor.png",   count: 1 },
+          { name: "Skeledirge ex", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Skeledirge.png", count: 1 },
       ]},
       { evo: [
-          { name: "Chimchar",  img: "../images/about_me/Pokemon/Chimchar.png",  count: 1 },
-          { name: "Monferno",  img: "../images/about_me/Pokemon/Monferno.png",  count: 1 },
-          { name: "Infernape", img: "../images/about_me/Pokemon/Infernape.png", count: 1 },
+          { name: "Chimchar",  img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Chimchar.png",  count: 1 },
+          { name: "Monferno",  img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Monferno.png",  count: 1 },
+          { name: "Infernape", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Infernape.png", count: 1 },
       ]},
-      { name: "Ursaluna V",  img: "../images/about_me/Pokemon/Ursaluna.png",  count: 1 },
+      { name: "Ursaluna V",  img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Ursaluna.png",  count: 1 },
       { evo: [
-          { name: "Nacli",     img: "../images/about_me/Pokemon/Nacli.png",     count: 1 },
-          { name: "Naclstack", img: "../images/about_me/Pokemon/Naclstack.png", count: 1 },
-          { name: "Garganacl", img: "../images/about_me/Pokemon/Garganacl.png", count: 1 },
+          { name: "Nacli",     img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Nacli.png",     count: 1 },
+          { name: "Naclstack", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Naclstack.png", count: 1 },
+          { name: "Garganacl", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Garganacl.png", count: 1 },
       ]},
-      { name: "Koraidon ex", img: "../images/about_me/Pokemon/Koraidon.png",    count: 1 },
+      { name: "Koraidon ex", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Koraidon.png",    count: 1 },
       { evo: [
-          { name: "Clefairy", img: "../images/about_me/Pokemon/Clefairy.png", count: 1 },
-          { name: "Clefable", img: "../images/about_me/Pokemon/Clefable.png", count: 1 },
+          { name: "Clefairy", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Clefairy.png", count: 1 },
+          { name: "Clefable", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Clefable.png", count: 1 },
       ]},
-      { name: "Sigilyph",   img: "../images/about_me/Pokemon/Sigilyph.png",    count: 1 },
-      { name: "Scream Tail", img: "../images/about_me/Pokemon/Scream_Tail.png", count: 1 },
-      { name: "Chimecho",   img: "../images/about_me/Pokemon/Chimecho.png",    count: 1 },
+      { name: "Sigilyph",   img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Sigilyph.png",    count: 1 },
+      { name: "Scream Tail", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Scream_Tail.png", count: 1 },
+      { name: "Chimecho",   img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Chimecho.png",    count: 1 },
       { evo: [
-          { name: "Cutiefly", img: "../images/about_me/Pokemon/Cutiefly.png",  count: 1 },
-          { name: "Ribombee", img: "../images/about_me/Pokemon/Ribombee.png",  count: 1 },
+          { name: "Cutiefly", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Cutiefly.png",  count: 1 },
+          { name: "Ribombee", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Ribombee.png",  count: 1 },
       ]},
     ],
   },
+
+
+
+
+  "Fire": {
+    "Energies": [,
+      { name: "Fire Energy", img: "../images/about_me/Pokemon/Fire/Fire_Energy.jpg", count: 18 },
+    ],
+    "Items": [
+      { name: "Rare Candy",       img: "../images/about_me/Pokemon/Fire/Rare_Candy.png",        count: 2 },
+      { name: "Great Ball",       img: "../images/about_me/Pokemon/Fire/Great_Ball.png",        count: 2 },
+      { name: "Switch",           img: "../images/about_me/Pokemon/Fire/Switch.png",            count: 2 },
+      { name: "Energy Retrieval", img: "../images/about_me/Pokemon/Fire/Energy_Retrieval.png",  count: 2 },
+      { name: "Pokémon Catcher",  img: "../images/about_me/Pokemon/Fire/Pokemon_Catcher.png",   count: 1 },
+      { name: "Pokégear 3.0",     img: "../images/about_me/Pokemon/Fire/pokegear_3_0.png",      count: 1 },
+      { name: "Energy Recycler",  img: "../images/about_me/Pokemon/Fire/Energy_Recycler.png",   count: 1 },
+      { name: "Blowtorch",        img: "../images/about_me/Pokemon/Fire/Blowtorch.png",         count: 1 },
+    ],
+    "Pokémon Tools": [
+      { name: "Brave Bangle",  img: "../images/about_me/Pokemon/Fire/Brave_Bangle.png",  count: 1 },
+      { name: "Rescue Board",  img: "../images/about_me/Pokemon/Fire/Rescue_Board.png",  count: 1 },
+    ],
+    "Supporters": [
+      { name: "Kindler",       img: "../images/about_me/Pokemon/Fire/Kindler.png",       count: 2 },
+      { name: "Mela",          img: "../images/about_me/Pokemon/Fire/Mela.png",          count: 1 },
+      { name: "Boss's Orders", img: "../images/about_me/Pokemon/Fire/Boss's_Orders.png", count: 1 },
+      { name: "Jacq",          img: "../images/about_me/Pokemon/Fire/Jacq.png",          count: 1 },
+      { name: "Larry",         img: "../images/about_me/Pokemon/Fire/Larry.png",         count: 1 },
+      { name: "Firebreather",  img: "../images/about_me/Pokemon/Fire/Firebreather.png",  count: 1 },
+    ],
+    // Pokémon: each entry is either a single card OR an evo chain.
+    // Single:   { name, img, count }
+    // Evo set:  { evo: [ {name, img, count}, ... ] }
+    "Pokémon": [
+      { evo: [
+          { name: "Fuecoco",       img: "../images/about_me/Pokemon/Fire/Fuecoco.png",    count: 1 },
+          { name: "Crocalor",      img: "../images/about_me/Pokemon/Fire/Crocalor.png",   count: 1 },
+          { name: "Skeledirge ex", img: "../images/about_me/Pokemon/Fire/Skeledirge.png", count: 1 },
+      ]},
+      { evo: [
+          { name: "Chimchar",  img: "../images/about_me/Pokemon/Fire/Chimchar.png",  count: 1 },
+          { name: "Monferno",  img: "../images/about_me/Pokemon/Fire/Monferno.png",  count: 1 },
+          { name: "Infernape", img: "../images/about_me/Pokemon/Fire/Infernape.png", count: 1 },
+      ]},
+      { evo: [
+          { name: "Litwick",      img: "../images/about_me/Pokemon/Fire/Litwick.png",    count: 1 },
+          { name: "Lampent",      img: "../images/about_me/Pokemon/Fire/Lampent.png",    count: 1 },
+          { name: "Chandelure",   img: "../images/about_me/Pokemon/Fire/Chandelure.png", count: 1 },
+      ]},
+      { evo: [
+          { name: "Clefairy", img: "../images/about_me/Pokemon/Fire/Clefairy.png", count: 1 },
+          { name: "Clefable", img: "../images/about_me/Pokemon/Fire/Clefable.png", count: 1 },
+      ]},
+      { evo: [
+          { name: "Cutiefly", img: "../images/about_me/Pokemon/Fire/Cutiefly.png",  count: 2 },
+          { name: "Ribombee", img: "../images/about_me/Pokemon/Fire/Ribombee.png",  count: 2 },
+      ]},
+      { evo: [
+          { split: "and", options: [
+            { name: "Charcadet", img: "../images/about_me/Pokemon/Fire/Charcadet_1.png", count: 1 },
+            { name: "Charcadet", img: "../images/about_me/Pokemon/Fire/Charcadet_2.png", count: 1 },
+          ]},
+          { split: "or", options: [
+              { name: "Ceruledge",  img: "../images/about_me/Pokemon/Fire/Ceruledge.png",  count: 1 },
+              { name: "Armarouge",  img: "../images/about_me/Pokemon/Fire/Armarouge.png",  count: 1 },
+          ]},
+      ]},
+      // Scorbunny evolves into two different Cinderace prints
+      { evo: [
+          { name: "Scorbunny", img: "../images/about_me/Pokemon/Fire/Scorbunny.png", count: 1 },
+          { split: "and", options: [
+              { name: "Cinderace", img: "../images/about_me/Pokemon/Fire/Cinderace_1.png", count: 1 },
+              { name: "Cinderace", img: "../images/about_me/Pokemon/Fire/Cinderace_2.png", count: 1 },
+          ]},
+      ]},
+      { name: "Reshiram ex", img:"../images/about_me/Pokemon/Fire/Reshiram_ex.png", count: 1 },
+      { name: "Volcanion",   img:"../images/about_me/Pokemon/Fire/Volcanion.png",   count: 1 },
+    ]},
+}
 
   // ── TEMPLATE ──────────────────────────────────
   // Uncomment and fill in to add a new deck:
