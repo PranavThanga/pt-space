@@ -1,49 +1,51 @@
 /* ─────────────────────────────────────────────
-   DECK TABS
+   DECK TABS  —  browser-tab style
 ───────────────────────────────────────────── */
 
 .deck-tabs-wrapper {
     padding: 20px 10px 0;
 }
 
-.deck-tabs-wrapper h2 {
-    border-bottom: none;
-    margin-bottom: 8px;
-}
-
 #deck-tabs {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    padding: 10px 10px 0;
+    gap: 4px;
+    padding: 0 10px;
+    /* The dotted bottom border acts as the "shelf" the tabs sit on */
     border-bottom: 3px dotted #1A7FA8;
-    padding-bottom: 12px;
+    align-items: flex-end;   /* tabs grow upward from the shelf */
 }
 
 .deck-tab {
-    background: none;
+    position: relative;
+    background-color: #d4e9f0;  /* slightly darker than page bg */
     border: 2px solid #1A7FA8;
-    border-radius: 8px;
-    padding: 7px 20px;
-    font-size: 1.1rem;
+    border-bottom: none;          /* open bottom so it merges with shelf */
+    border-radius: 8px 8px 0 0;  /* only top corners rounded */
+    padding: 7px 22px 9px;        /* extra bottom padding to overlap shelf */
+    font-size: 1.05rem;
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
     color: #1A3A4A;
-    opacity: 0.45;
-    transition: opacity 0.25s ease, transform 0.2s ease, border-color 0.25s ease, color 0.25s ease;
+    opacity: 0.55;
+    bottom: -3px;                 /* pull down to sit flush on the dotted border */
+    transition: opacity 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 
 .deck-tab:hover:not(.active) {
-    opacity: 0.75;
-    transform: scale(1.05);
+    opacity: 0.8;
+    background-color: #c2dce6;
 }
 
 .deck-tab.active {
     opacity: 1;
     font-weight: bold;
-    border-color: #E05C3A;
+    background-color: #E8F4F8;  /* match page background so it "opens" */
+    border-color: #1A7FA8;
     color: #E05C3A;
-    border-style: dashed;
+    /* Hide the shelf line behind the active tab */
+    border-bottom: 3px solid #E8F4F8;
+    z-index: 1;
 }
 
 /* ─────────────────────────────────────────────
@@ -116,18 +118,25 @@ img:hover {
 ───────────────────────────────────────────── */
 
 @media (prefers-color-scheme: dark) {
+    #deck-tabs {
+        border-bottom-color: #2AAECF;
+    }
+
     .deck-tab {
         color: #E8F4F8;
         border-color: #2AAECF;
+        background-color: #0a1a22;
+    }
+
+    .deck-tab:hover:not(.active) {
+        background-color: #0f2530;
     }
 
     .deck-tab.active {
         color: #FF6B4A;
-        border-color: #FF6B4A;
-    }
-
-    #deck-tabs {
-        border-bottom-color: #2AAECF;
+        border-color: #2AAECF;
+        background-color: #0D1F26;
+        border-bottom-color: #0D1F26;
     }
 
     .arrow {

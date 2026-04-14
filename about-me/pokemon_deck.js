@@ -6,7 +6,7 @@
 
 const decks = {
 
-  "Pranav": {
+  "Fire-Fighting-Psychic": {
     "Energies": [
       { name: "Strong Energy",   img: "../images/about_me/Pokemon/Strong_Energy.png",   count: 1 },
       { name: "Fighting Energy", img: "../images/about_me/Pokemon/Fighting_Energy.webp", count: 8 },
