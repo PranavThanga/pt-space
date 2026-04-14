@@ -121,12 +121,14 @@
     background-color: #fde8df;
     color: #E05C3A;
     border: 1px solid #E05C3A;
+    margin-bottom: 20px;
 }
 
 .evo-connector--and {
     background-color: #ddf0f8;
     color: #1A7FA8;
     border: 1px solid #1A7FA8;
+    margin-bottom: 20px;
 }
 
 img {
