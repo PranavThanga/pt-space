@@ -7,6 +7,8 @@
 const decks = {
 
   "Fire-Fighting-Psychic": {
+    creator: "Pranav",
+    format:  "Expanded",
     "Energies": [
       { name: "Strong Energy",   img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Strong_Energy.png",   count: 1 },
       { name: "Fighting Energy", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Fighting_Energy.webp", count: 8 },
@@ -83,6 +85,8 @@ const decks = {
 
 
   "Fire": {
+    creator: "Pranav",
+    format:  "Expanded",
     "Energies": [
       { name: "Fire Energy", img: "../images/about_me/Pokemon/Fire/Fire_Energy.jpg", count: 18 },
     ],
@@ -162,6 +166,8 @@ const decks = {
   // Uncomment and fill in to add a new deck:
   //
   // "Friend Name": {
+  //   creator: "Friend Name",
+  //   format:  "Standard",   // e.g. Standard, Expanded, Unlimited
   //   "Energies": [
   //     { name: "Water Energy", img: "../images/...", count: 10 },
   //   ],
@@ -278,6 +284,9 @@ function buildEvoSet(chain) {
 //  RENDER
 // ─────────────────────────────────────────────
 
+// Reserved keys that hold metadata, not card arrays — skip them in section rendering
+const METADATA_KEYS = new Set(["creator", "format"]);
+
 function renderDeck(deckName) {
   const deck   = decks[deckName];
   const target = document.getElementById("deck-content");
@@ -287,8 +296,27 @@ function renderDeck(deckName) {
   target.classList.remove("deck-visible");
 
   requestAnimationFrame(() => {
+
+    // ── Info bar ──
+    const info = document.createElement("div");
+    info.className = "deck-info";
+
+    const creatorSpan = document.createElement("span");
+    creatorSpan.className = "deck-info-item";
+    creatorSpan.innerHTML = `<strong>Creator:</strong> ${deck.creator ?? "Unknown"}`;
+
+    const formatSpan = document.createElement("span");
+    formatSpan.className = "deck-info-item";
+    formatSpan.innerHTML = `<strong>Format:</strong> ${deck.format ?? "Unknown"}`;
+
+    info.appendChild(creatorSpan);
+    info.appendChild(formatSpan);
+    target.appendChild(info);
+
+    // ── Card sections ──
     for (const [section, cards] of Object.entries(deck)) {
-      // Skip empty sections
+      // Skip metadata fields and empty sections
+      if (METADATA_KEYS.has(section)) continue;
       if (!cards || cards.length === 0) continue;
 
       const h2 = document.createElement("h2");

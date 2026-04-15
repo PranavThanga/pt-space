@@ -64,7 +64,53 @@
 }
 
 /* ─────────────────────────────────────────────
-   CARD GRID LAYOUTS  (unchanged from original)
+   DECK INFO BAR
+───────────────────────────────────────────── */
+
+.deck-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 16px;
+    margin: 14px 10px 4px;
+    background-color: #F5E6C8;
+    border: 2px solid #1A7FA8;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.deck-info-item {
+    font-size: 1rem;
+    color: #1A3A4A;
+}
+
+.deck-info-item strong {
+    color: #E05C3A;
+}
+
+@media (prefers-color-scheme: dark) {
+    .deck-info {
+        background-color: #122B36;
+        border-color: #2AAECF;
+    }
+
+    .deck-info-item {
+        color: #E8F4F8;
+    }
+
+    .deck-info-item strong {
+        color: #FF6B4A;
+    }
+}
+
+@media (max-width: 480px) {
+    .deck-info {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+/* ─────────────────────────────────────────────
 ───────────────────────────────────────────── */
 
 .card-type {
@@ -121,14 +167,12 @@
     background-color: #fde8df;
     color: #E05C3A;
     border: 1px solid #E05C3A;
-    margin-bottom: 20px;
 }
 
 .evo-connector--and {
     background-color: #ddf0f8;
     color: #1A7FA8;
     border: 1px solid #1A7FA8;
-    margin-bottom: 20px;
 }
 
 img {
