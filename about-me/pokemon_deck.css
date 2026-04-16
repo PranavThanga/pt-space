@@ -48,9 +48,61 @@
     z-index: 1;
 }
 
-/* ─────────────────────────────────────────────
-   DECK CONTENT FADE TRANSITION
-───────────────────────────────────────────── */
+/* + button — lives in the tab bar but styled distinctly */
+.deck-tab--add {
+    margin-left: auto;   /* pushes it to the far right of the tab row */
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 4px 14px 8px;
+    border-color: #E05C3A;
+    color: #E05C3A;
+}
+
+.deck-tab--add:hover:not(.active) {
+    background-color: #fde8df;
+}
+
+.deck-tab--add.active {
+    color: #E05C3A;
+    border-color: #E05C3A;
+    background-color: #E8F4F8;
+    border-bottom-color: #E8F4F8;
+}
+
+/* Form panel — hidden by default, revealed when + is active */
+#deck-form {
+    display: none;
+    padding: 20px 14px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#deck-form.form-visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-color-scheme: dark) {
+    .deck-tab--add {
+        border-color: #FF6B4A;
+        color: #FF6B4A;
+    }
+
+    .deck-tab--add:hover:not(.active) {
+        background-color: #3d1a10;
+    }
+
+    .deck-tab--add.active {
+        color: #FF6B4A;
+        border-color: #FF6B4A;
+        background-color: #0D1F26;
+        border-bottom-color: #0D1F26;
+    }
+}
+
+
 
 #deck-content {
     opacity: 0;

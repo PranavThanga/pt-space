@@ -38,6 +38,20 @@
             <!-- All card sections are rendered here by pokemon_deck.js -->
             <div id="deck-content"></div>
 
+            <!-- Add-deck form — shown when + tab is clicked.
+                 Put your form inputs inside this div. -->
+            <div id="deck-form">
+                <h2>Add a New Deck</h2>
+                <!-- YOUR FORM GOES HERE -->
+                <form action="https://formspree.io/f/mlgagvyl" method="post">
+                    <input type="text" name="creator" class="form-item" placeholder="Name of the deck creator..." required>
+                    <input type="text" name="deck-name" class="form-item" placeholder="Name of the deck..." required>
+                    <textarea name="card-list" class="form-item" placeholder="Cards in the deck (Card Name - Set Name [ex. Eevee - Prismatic Evolutions])" required></textarea>
+                    <input type="email" name="email" class="form-item" placeholder="Your email... (response purposes only)" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
         </div>
     </body>
 

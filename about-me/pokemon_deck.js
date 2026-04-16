@@ -8,7 +8,7 @@ const decks = {
 
   "Fire-Fighting-Psychic": {
     creator: "Pranav",
-    format:  "Expanded",
+    format:  "Standard",
     "Energies": [
       { name: "Strong Energy",   img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Strong_Energy.png",   count: 1 },
       { name: "Fighting Energy", img: "../images/about_me/Pokemon/Fire-Fighting-Psychic/Fighting_Energy.webp", count: 8 },
@@ -86,7 +86,7 @@ const decks = {
 
   "Fire": {
     creator: "Pranav",
-    format:  "Expanded",
+    format:  "Standard",
     "Energies": [
       { name: "Fire Energy", img: "../images/about_me/Pokemon/Fire/Fire_Energy.jpg", count: 18 },
     ],
@@ -343,14 +343,28 @@ function renderDeck(deckName) {
 }
 
 // ─────────────────────────────────────────────
+//  FORM / DECK TOGGLE
+// ─────────────────────────────────────────────
+
+function showForm() {
+  document.getElementById("deck-content").style.display = "none";
+  document.getElementById("deck-form").classList.add("form-visible");
+}
+
+function showDeck(deckName) {
+  document.getElementById("deck-form").classList.remove("form-visible");
+  document.getElementById("deck-content").style.display = "";
+  renderDeck(deckName);
+}
+
+// ─────────────────────────────────────────────
 //  TABS
 // ─────────────────────────────────────────────
 
 function initTabs() {
   const tabBar = document.getElementById("deck-tabs");
 
-  // Dynamically build one tab per deck so adding a deck to the data
-  // automatically creates its tab — no HTML changes needed.
+  // One tab per deck — adding a deck to the data auto-creates its tab
   Object.keys(decks).forEach((name, index) => {
     const btn = document.createElement("button");
     btn.className = "deck-tab" + (index === 0 ? " active" : "");
@@ -359,13 +373,33 @@ function initTabs() {
     tabBar.appendChild(btn);
   });
 
+  // ── + button ──
+  const addBtn = document.createElement("button");
+  addBtn.className = "deck-tab deck-tab--add";
+  addBtn.id = "deck-add-btn";
+  addBtn.textContent = "+";
+  addBtn.title = "Add a new deck";
+  tabBar.appendChild(addBtn);
+
+  // ── Click handler for deck tabs ──
   tabBar.addEventListener("click", e => {
     const tab = e.target.closest(".deck-tab");
-    if (!tab || tab.classList.contains("active")) return;
+    if (!tab) return;
 
+    // + button clicked
+    if (tab.id === "deck-add-btn") {
+      if (tab.classList.contains("active")) return;
+      document.querySelector(".deck-tab.active").classList.remove("active");
+      tab.classList.add("active");
+      showForm();
+      return;
+    }
+
+    // Regular deck tab clicked
+    if (tab.classList.contains("active")) return;
     document.querySelector(".deck-tab.active").classList.remove("active");
     tab.classList.add("active");
-    renderDeck(tab.dataset.deck);
+    showDeck(tab.dataset.deck);
   });
 }
 
