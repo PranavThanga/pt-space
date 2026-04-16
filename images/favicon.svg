@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- background -->
+  <rect width="64" height="64" rx="14" fill="#E05C3A"/>
+  <!-- crown body -->
+  <path d="M 8,52 L 8,24 L 20,36 L 32,12 L 44,36 L 56,24 L 56,52 Z" fill="#F5E6C8"/>
+  <!-- engraved P -->
+  <text x="32" y="49" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="24" font-weight="700" fill="#1A3A4A">P</text>
+  <!-- gem dots at crown tips -->
+  <circle cx="8"  cy="24" r="3.5" fill="#1A7FA8"/>
+  <circle cx="32" cy="12" r="3.5" fill="#1A7FA8"/>
+  <circle cx="56" cy="24" r="3.5" fill="#1A7FA8"/>
+</svg>
