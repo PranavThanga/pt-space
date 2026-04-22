@@ -421,11 +421,13 @@ function initLightbox() {
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
     lightbox.classList.add("lightbox-open");
+    document.body.classList.add("lightbox-active");
   });
 
   // Close on backdrop click, lightbox image click, or Escape key
   function closeLightbox() {
     lightbox.classList.remove("lightbox-open");
+    document.body.classList.remove("lightbox-active");
     lightboxImg.src = "";
   }
 
