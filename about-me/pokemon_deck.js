@@ -219,6 +219,8 @@ function buildSingleCard(card) {
   const img = document.createElement("img");
   img.src = card.img;
   img.alt = card.name;
+  img.title = "Click to enlarge";
+  img.style.cursor = "pointer";
 
   const p = document.createElement("p");
   p.textContent = `${card.name} x${card.count}`;
@@ -303,11 +305,11 @@ function renderDeck(deckName) {
 
     const creatorSpan = document.createElement("span");
     creatorSpan.className = "deck-info-item";
-    creatorSpan.innerHTML = `<strong>Creator:</strong> ${deck.creator ?? "Unknown"}`;
+    creatorSpan.innerHTML = `👤 <strong>Creator:</strong> ${deck.creator ?? "Unknown"}`;
 
     const formatSpan = document.createElement("span");
     formatSpan.className = "deck-info-item";
-    formatSpan.innerHTML = `<strong>Format:</strong> ${deck.format ?? "Unknown"}`;
+    formatSpan.innerHTML = `📋 <strong>Format:</strong> ${deck.format ?? "Unknown"}`;
 
     info.appendChild(creatorSpan);
     info.appendChild(formatSpan);
@@ -404,10 +406,42 @@ function initTabs() {
 }
 
 // ─────────────────────────────────────────────
+//  LIGHTBOX
+// ─────────────────────────────────────────────
+
+function initLightbox() {
+  const lightbox   = document.getElementById("card-lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const backdrop   = document.getElementById("lightbox-backdrop");
+
+  // Open — delegate clicks on any card img inside deck-content
+  document.getElementById("deck-content").addEventListener("click", e => {
+    const img = e.target.closest(".card img");
+    if (!img) return;
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add("lightbox-open");
+  });
+
+  // Close on backdrop click, lightbox image click, or Escape key
+  function closeLightbox() {
+    lightbox.classList.remove("lightbox-open");
+    lightboxImg.src = "";
+  }
+
+  backdrop.addEventListener("click", closeLightbox);
+  lightboxImg.addEventListener("click", closeLightbox);
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeLightbox();
+  });
+}
+
+// ─────────────────────────────────────────────
 //  INIT
 // ─────────────────────────────────────────────
 
 document.addEventListener("DOMContentLoaded", () => {
   initTabs();
+  initLightbox();
   renderDeck(Object.keys(decks)[0]);
 });

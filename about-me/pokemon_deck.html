@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="../main.css"/>
         <link rel="stylesheet" href="pokemon_deck.css"/>
-        <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
         <script src="pokemon_deck.js" defer></script>
         <title>Pranav's Pokédecks</title>
     </head>
@@ -44,26 +43,14 @@
             <div id="deck-form">
                 <h2>Add a New Deck</h2>
                 <!-- YOUR FORM GOES HERE -->
-                <form action="https://formspree.io/f/mlgagvyl" method="post">
-                    <input type="text" name="creator" class="form-item" placeholder="Name of the deck creator..." required>
-                    <br><br>
-
-                    <input type="text" name="deck-name" class="form-item" placeholder="Name of the deck..." required>
-                    <br><br>
-
-                    <input type="text" name="deck-format" class="form-item" placeholder="Deck format..." required>
-                    <br><br>
-
-                    <textarea name="card-list" class="form-item" placeholder="Cards in the deck (Card Name - Set Name - Count [ex. Eevee - Prismatic Evolutions - 4])" required></textarea>
-                    <br><br>
-
-                    <input type="email" name="email" class="form-item" placeholder="Your email... (response purposes only)" required>
-                    <br><br>
-
-                    <button type="submit">Submit</button>
-                </form>
             </div>
 
+        </div>
+
+        <!-- Lightbox overlay — shown when a card image is clicked -->
+        <div id="card-lightbox">
+            <div id="lightbox-backdrop"></div>
+            <img id="lightbox-img" src="" alt="">
         </div>
     </body>
 

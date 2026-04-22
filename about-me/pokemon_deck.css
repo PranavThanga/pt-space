@@ -245,6 +245,47 @@ img:hover {
 }
 
 /* ─────────────────────────────────────────────
+   LIGHTBOX
+───────────────────────────────────────────── */
+
+#card-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;                /* covers the entire viewport */
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-lightbox.lightbox-open {
+    display: flex;
+}
+
+#lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+#lightbox-img {
+    position: relative;     /* sits above the backdrop */
+    max-height: 90vh;
+    max-width: 90vw;
+    width: auto;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    animation: lightbox-pop 0.2s ease;
+}
+
+@keyframes lightbox-pop {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+/* ─────────────────────────────────────────────
    DARK MODE
 ───────────────────────────────────────────── */
 
