@@ -88,7 +88,7 @@ const decks = {
     creator: "Pranav",
     format:  "Standard",
     "Energies": [
-      { name: "Fire Energy", img: "../images/about_me/Pokemon/Fire/Fire_Energy.jpg", count: 18 },
+      { name: "Fire Energy", img: "../images/about_me/Pokemon/Fire/Fire_Energy.jpg", count: 17 },
     ],
     "Items": [
       { name: "Rare Candy",       img: "../images/about_me/Pokemon/Fire/Rare_Candy.png",        count: 2 },
@@ -107,7 +107,7 @@ const decks = {
     "Supporters": [
       { name: "Kindler",       img: "../images/about_me/Pokemon/Fire/Kindler.png",       count: 2 },
       { name: "Mela",          img: "../images/about_me/Pokemon/Fire/Mela.png",          count: 1 },
-      { name: "Boss's Orders", img: "../images/about_me/Pokemon/Fire/Boss's_Orders.png", count: 1 },
+      { name: "Boss's Orders", img: "../images/about_me/Pokemon/Fire/Boss's_Orders.png", count: 3 },
       { name: "Jacq",          img: "../images/about_me/Pokemon/Fire/Jacq.png",          count: 1 },
       { name: "Larry",         img: "../images/about_me/Pokemon/Fire/Larry.png",         count: 1 },
       { name: "Firebreather",  img: "../images/about_me/Pokemon/Fire/Firebreather.png",  count: 1 },
@@ -155,7 +155,6 @@ const decks = {
               { name: "Cinderace", img: "../images/about_me/Pokemon/Fire/Cinderace_2.png", count: 1 },
           ]},
       ]},
-      { name: "Reshiram ex", img: "../images/about_me/Pokemon/Fire/Reshiram_ex.png", count: 1 },
       { name: "Volcanion",   img: "../images/about_me/Pokemon/Fire/Volcanion.png",   count: 1 },
     ],
   },
